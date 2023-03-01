@@ -84,7 +84,7 @@ export default {
         font-weight: 700;
         text-transform: uppercase;
         line-height: 40px;
-        padding: 0 10px;
+        padding: 15px;
 
         position: relative;
 
@@ -103,6 +103,15 @@ export default {
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+
+    .nav__item:last-child {
+        padding-right: 0;
+
+        &:hover::after{
+            transform: translateX(0);
+
         }
     }
 
