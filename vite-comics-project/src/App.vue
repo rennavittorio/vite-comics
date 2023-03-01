@@ -1,4 +1,4 @@
-<script setup>
+<script>
 
 
 
@@ -10,7 +10,7 @@
 
 </template>
 
-<style>
+<style lang="scss">
 
 
 
