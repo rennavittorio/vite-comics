@@ -6,6 +6,10 @@ export default {
                 { menu: 'dc comics', text: 'characters', link: '#', },
                 { menu: 'dc comics', text: 'comics', link: '#', },
                 { menu: 'dc comics', text: 'movies', link: '#', },
+                { menu: 'dc comics', text: 'tv', link: '#', },
+                { menu: 'dc comics', text: 'games', link: '#', },
+                { menu: 'dc comics', text: 'videos', link: '#', },
+                { menu: 'dc comics', text: 'news', link: '#', },
 
                 { menu: 'shop', text: 'shop dc', link: '#', },
                 { menu: 'shop', text: 'shop dc collectibles', link: '#', },
@@ -13,10 +17,20 @@ export default {
                 { menu: 'dc', text: 'terms of use', link: '#', },
                 { menu: 'dc', text: 'privacy policiy (new)', link: '#', },
                 { menu: 'dc', text: 'ad choice', link: '#', },
+                { menu: 'dc', text: 'advertising', link: '#', },
+                { menu: 'dc', text: 'jobs', link: '#', },
+                { menu: 'dc', text: 'subscriptions', link: '#', },
+                { menu: 'dc', text: 'talent workshops', link: '#', },
+                { menu: 'dc', text: 'CPSC certificates', link: '#', },
+                { menu: 'dc', text: 'ratings', link: '#', },
+                { menu: 'dc', text: 'shop help', link: '#', },
+                { menu: 'dc', text: 'contact us', link: '#', },
 
                 { menu: 'sites', text: 'dc', link: '#', },
                 { menu: 'sites', text: 'mad magazine', link: '#', },
                 { menu: 'sites', text: 'dc kids', link: '#', },
+                { menu: 'sites', text: 'dc universe', link: '#', },
+                { menu: 'sites', text: 'dc power visa', link: '#', },
             ]
         }
     },
@@ -184,7 +198,9 @@ export default {
     .footer__logo-wrapper{
         position: absolute;
         width: 100%;
-        transform: translate(35%, -15%);
+        bottom: 0;
+        left: 0;
+        transform: translate(50%, -25%);
         z-index: 0;
 
     }
@@ -193,7 +209,7 @@ export default {
 
 
     .col {
-        padding-right: 50px;
+        padding-right: 100px;
     }
 
     .footer__links {
@@ -221,6 +237,7 @@ export default {
         .footer__menu__item {
             font-size: 1rem;
             font-weight: 300;
+            text-transform: capitalize;
             padding: 10px 0;
 
             &:hover {
