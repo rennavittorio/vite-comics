@@ -25,6 +25,9 @@ export default {
     background-color: $main-dark;
     color: $main-light;
     padding: 40px 0;
+
+    position: relative;
+    z-index: 999;
 }
 
 </style>

@@ -14,6 +14,10 @@ export default {
         <div class="footer__links">
 
             <div class="container">
+
+                <div class="footer__logo-wrapper">
+                    <img src="/images/dc-logo-bg.png" alt="">
+                </div>
                 
                 <div class="row">
                     <div class="col">
@@ -141,6 +145,22 @@ export default {
 
 .footer {
     color: $main-light;
+    position: relative;
+
+    .container {
+
+
+    }
+
+    .footer__logo-wrapper{
+        position: absolute;
+        width: 100%;
+        transform: translate(35%, -15%);
+        z-index: 0;
+
+    }
+
+
 
 
     .col {
@@ -175,6 +195,8 @@ export default {
     .footer__stay-in-touch {
         background-color: $main-dark;
         padding: 50px 0;
+        position: relative;
+        z-index: 999;
 
         .row {
             justify-content: space-between;
