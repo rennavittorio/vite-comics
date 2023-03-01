@@ -2,11 +2,13 @@
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppServices from './components/AppServices.vue'
 
 export default {
   components: {
     AppHeader,
     AppMain,
+    AppServices,
     AppFooter,
   }
 }
@@ -21,6 +23,8 @@ export default {
     <AppHeader />
 
     <AppMain />
+
+    <AppServices />
 
     <AppFooter />
 
