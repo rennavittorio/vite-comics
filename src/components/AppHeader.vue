@@ -68,7 +68,7 @@ export default {
 }
 
 .logo-wrapper {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .nav__list {
