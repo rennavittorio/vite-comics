@@ -2,8 +2,53 @@
 export default {
     data() {
         return {
-            example: 'exmaple'
+            linkList: [
+                { menu: 'dc comics', text: 'characters', link: '#', },
+                { menu: 'dc comics', text: 'comics', link: '#', },
+                { menu: 'dc comics', text: 'movies', link: '#', },
+
+                { menu: 'shop', text: 'shop dc', link: '#', },
+                { menu: 'shop', text: 'shop dc collectibles', link: '#', },
+
+                { menu: 'dc', text: 'terms of use', link: '#', },
+                { menu: 'dc', text: 'privacy policiy (new)', link: '#', },
+                { menu: 'dc', text: 'ad choice', link: '#', },
+
+                { menu: 'sites', text: 'dc', link: '#', },
+                { menu: 'sites', text: 'mad magazine', link: '#', },
+                { menu: 'sites', text: 'dc kids', link: '#', },
+            ]
         }
+    },
+
+    methods: {
+
+    },
+
+    computed: {
+        getSubMenuDcComics(){
+            return this.linkList.filter(obj => {
+                return obj.menu === 'dc comics'
+            });
+        },
+
+        getSubMenuShop(){
+            return this.linkList.filter(obj => {
+                return obj.menu === 'shop'
+            });
+        },
+
+        getSubMenuDc(){
+            return this.linkList.filter(obj => {
+                return obj.menu === 'dc'
+            });
+        },
+
+        getSubMenuSites(){
+            return this.linkList.filter(obj => {
+                return obj.menu === 'sites'
+            });
+        },
     }
 }
 </script>
@@ -23,74 +68,63 @@ export default {
                     <div class="col">
     
                         <ul class="footer__menu">
-                            <span>Dc comics</span> 
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
+                            <span class="menu__title">
+                                {{ getSubMenuDcComics[0].menu }}
+                            </span> 
+                            <li 
+                            class="footer__menu__item"
+                            v-for="link in getSubMenuDcComics"
+                            >
+                                <a href="">
+                                    {{ link.text }}
+                                </a>
                             </li>
                         </ul>
     
                         <ul class="footer__menu">
-                            <span>Dc comics</span> 
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
+                            <span class="menu__title">
+                                {{ getSubMenuShop[0].menu }}
+                            </span> 
+                            <li 
+                            class="footer__menu__item"
+                            v-for="link in getSubMenuShop"
+                            >
+                                <a href="">
+                                    {{ link.text }}
+                                </a>
                             </li>
                         </ul>
     
                     </div>
     
                     <div class="col">
-                                            <ul class="footer__menu">
-                            <span>Dc comics</span> 
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
+                        <ul class="footer__menu">
+                            <span class="menu__title">
+                                {{ getSubMenuDc[0].menu }}
+                            </span> 
+                            <li 
+                            class="footer__menu__item"
+                            v-for="link in getSubMenuDc"
+                            >
+                                <a href="">
+                                    {{ link.text }}
+                                </a>
                             </li>
                         </ul>
                     </div>
     
                     <div class="col">
-                                            <ul class="footer__menu">
-                            <span>Dc comics</span> 
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
-                            </li>
-                            <li class="footer__menu__item">
-                                <a href="">link</a>
+                        <ul class="footer__menu">
+                            <span class="menu__title">
+                                {{ getSubMenuSites[0].menu }}
+                            </span> 
+                            <li 
+                            class="footer__menu__item"
+                            v-for="link in getSubMenuSites"
+                            >
+                                <a href="">
+                                    {{ link.text }}
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -147,11 +181,6 @@ export default {
     color: $main-light;
     position: relative;
 
-    .container {
-
-
-    }
-
     .footer__logo-wrapper{
         position: absolute;
         width: 100%;
@@ -180,14 +209,23 @@ export default {
 
         margin-bottom: 20px;
 
+        position: relative;
+        z-index: 999;
+
         span {
             font-size: 2rem;
             font-weight: 700;
+            text-transform: uppercase;
         }
 
         .footer__menu__item {
             font-size: 1rem;
+            font-weight: 300;
             padding: 10px 0;
+
+            &:hover {
+                color: $main-blue;
+            }
         }
 
     }
