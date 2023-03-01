@@ -14,9 +14,9 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="logo-wrapper">
+                    <a class="logo-wrapper" href="#">
                         <img src="/images/dc-logo.png" alt="">
-                    </div>
+                    </a>
                 </div>
                 <div class="col">
                     <nav class="nav-bar">
@@ -68,6 +68,7 @@ export default {
 }
 
 .logo-wrapper {
+    display: block;
     padding: 10px 0;
 }
 
