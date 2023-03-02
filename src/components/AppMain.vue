@@ -102,6 +102,7 @@ export default {
 
                 <AppCard
                 v-for="(card, i) in cardList" :key="i" :imageSrc="card.thumb" :text="card.series"
+                class="card"
                 />
 
             </div>
@@ -129,6 +130,13 @@ export default {
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding: 20px;
+
+    .card:hover {
+        color: $main-blue;
+        box-shadow: 10px 5px 5px $main-blue;
+    }
 }
+
+
 
 </style>
