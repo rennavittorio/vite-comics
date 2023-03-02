@@ -10,7 +10,8 @@ export default {
     AppMain,
     AppServices,
     AppFooter,
-  }
+  },
+  
 }
 
 
