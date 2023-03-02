@@ -1,5 +1,11 @@
 <script>
+import AppBtn from './AppBtn.vue'
+
 export default {
+    components: {
+        AppBtn,
+    }, 
+
     data() {
         return {
             linkList: [
@@ -154,9 +160,10 @@ export default {
 
                 <div class="row">
                     <div class="col">
-                        <button class="btn sign-up">
+                        <AppBtn text="Sign-up now" />
+                        <!-- <button class="btn sign-up">
                             Sign-up now
-                        </button>
+                        </button> -->
                     </div>
                     <div class="col follow-us">
                         <a href="">
@@ -281,19 +288,19 @@ export default {
         }
 
 
-        .btn {
-            padding: 10px;
-            text-transform: uppercase;
-            background-color: transparent;
-            color: $main-light;
-            border: 2px solid $main-blue;
+        // .btn {
+        //     padding: 10px;
+        //     text-transform: uppercase;
+        //     background-color: transparent;
+        //     color: $main-light;
+        //     border: 2px solid $main-blue;
 
-            &:hover {
-                background-color: $main-blue;
-                color: $main-dark;
-                cursor: pointer;
-            }
-        }
+        //     &:hover {
+        //         background-color: $main-blue;
+        //         color: $main-dark;
+        //         cursor: pointer;
+        //     }
+        // }
 
     }
 
